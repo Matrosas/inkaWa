@@ -1,0 +1,36 @@
+{
+  "profesores": [
+    {
+      "nombre": "Carlos",
+      "horarios": ["7:00 AM", "8:00 AM", "9:00 AM", "3:00 PM"],
+      "especialidad": "Iniciación al surf / Técnicas básicas"
+    },
+    {
+      "nombre": "Lucía",
+      "horarios": ["9:00 AM","10:00 AM", "11:00 AM", "4:00 PM"],
+      "especialidad": "Técnicas básicas / Clases para niños"
+    },
+    {
+      "nombre": "Andrés",
+      "horarios": ["7:00 AM", "8:00 AM", "5:00 PM", "6:00 PM"],
+      "especialidad": "Surf intermedio y avanzado"
+    }
+  ],
+  "eventos": [
+    {
+      "titulo": "Taller de iniciación al surf - Verano 2026",
+      "descripcion": "Un taller intensivo de 3 días para quienes nunca han tocado una tabla. Incluye teoría, práctica, y fotos en la playa.",
+      "fecha": "Del 15 al 17 de enero",
+      "lugar": "Playa Pocitas, Mancora",
+      "imagen": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/aa/5c/fe/caption.jpg?w=500&h=400&s=1"
+    },
+    {
+      "titulo": "Surf Trip a Punta Hermosa",
+      "descripcion": "Acompáñanos a un viaje de 2 días para surfear en una de las playas más conocidas de Perú. Ideal para intermedios y avanzados.",
+      "fecha": "Sábado 9 y domingo 10 de Agosto ",
+      "lugar": "Punta Hermosa",
+      "imagen": "https://dukesurf.com/wp-content/uploads/2022/08/2-SEN%CC%83ORITAS-SOL-AGUIRRE-1573x1068.jpg"
+    }
+  ]
+}
+
