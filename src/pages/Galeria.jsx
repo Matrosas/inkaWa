@@ -10,7 +10,7 @@ import img7 from '../assets/7.jpg';
 import img8 from '../assets/8.png';
 import img9 from '../assets/9.png';
 
-const imagenes = [img1, img2, img3,img4,img5,img6,img7, img8, img9];
+const imagenes = [img1, img2, img3,img4,img5,img6, img7, img8, img9];
 
 export default function Galeria() {
   return (
