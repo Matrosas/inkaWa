@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 
 function Footer() {
   return (
@@ -6,14 +6,17 @@ function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 space-y-4 md:space-y-0">
         <p className="text-sm">© 2025 Inka Warrior. Todos los derechos reservados.</p>
         <div className="flex space-x-6 text-xl">
-          <a href="#" className="hover:text-yellow-400" aria-label="Facebook">
+          <a href="https://www.facebook.com/share/19FMqALL3T/" target="_blank" rel="noopener noreferrer"  className="hover:text-yellow-400" aria-label="Facebook">
             <FaFacebookF />
           </a>
-          <a href="#" className="hover:text-yellow-400" aria-label="Instagram">
+          <a href="https://www.instagram.com/inkawarriorsurf?igsh=MTIyMWh1bXQyemxrcw==" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400" aria-label="Instagram">
             <FaInstagram />
           </a>
-          <a href="#" className="hover:text-yellow-400" aria-label="TikTok">
+          <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400" aria-label="TikTok">
             <FaTiktok />
+          </a>
+          <a href="https://wa.me/51981476240" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400" aria-label="WhatsApp">
+            <FaWhatsapp />
           </a>
         </div>
       </div>

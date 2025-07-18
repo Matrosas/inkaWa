@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-
 function AppointmentForm({ valoresIniciales = {} }) {
-
   const profesoresDisponibles = ['Carlos', 'Lucía', 'Andrés'];
 
   const [formData, setFormData] = useState({
@@ -28,26 +26,58 @@ function AppointmentForm({ valoresIniciales = {} }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const { nombre, fecha, hora, telefono, profesor } = formData;
+
+    if (!nombre || !fecha || !hora || !telefono || !profesor) {
+      alert('Por favor, completa todos los campos.');
+      return;
+    }
+
+    // Guardar la cita en localStorage
     const citas = JSON.parse(localStorage.getItem('citas') || '[]');
     citas.push(formData);
     localStorage.setItem('citas', JSON.stringify(citas));
+
+    // Crear mensaje para WhatsApp
+    const mensaje = `Hola! Quisiera reservar una clase de surf:\n\n👤 Nombre: ${nombre}\n📅 Fecha: ${fecha}\n🕓 Hora: ${hora}\n🏄‍♂️ Profesor: ${profesor}\n📱 Teléfono: ${telefono}`;
+    const numeroWhatsApp = '51981476240'; // Perú: +51
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+
+    // Redirigir a WhatsApp
+    window.open(url, '_blank');
+
+    // Resetear formulario
     alert('Cita guardada correctamente');
     setFormData({ nombre: '', fecha: '', hora: '', telefono: '', profesor: '' });
   };
 
   return (
-    
-    <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl shadow-md w-full max-w-md mx-auto ">
+    <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl shadow-md w-full max-w-md mx-auto">
       <div className="mb-4">
         <label className="block font-medium">Nombre</label>
-        <input type="text" name="nombre" value={formData.nombre} onChange={handleChange}
-          className="w-full p-2 border border-gray-300 rounded mt-1" required />
+        <input
+          type="text"
+          name="nombre"
+          value={formData.nombre}
+          onChange={handleChange}
+          className="w-full p-2 border border-gray-300 rounded mt-1"
+          required
+        />
       </div>
+
       <div className="mb-4">
         <label className="block font-medium">Fecha</label>
-        <input type="date" name="fecha" value={formData.fecha} onChange={handleChange}
-          className="w-full p-2 border border-gray-300 rounded mt-1" required />
+        <input
+          type="date"
+          name="fecha"
+          value={formData.fecha}
+          onChange={handleChange}
+          className="w-full p-2 border border-gray-300 rounded mt-1"
+          required
+        />
       </div>
+
       <div className="mb-4">
         <label className="block font-medium">Hora</label>
         <select
@@ -90,17 +120,26 @@ function AppointmentForm({ valoresIniciales = {} }) {
 
       <div className="mb-4">
         <label className="block font-medium">Teléfono</label>
-        <input type="tel" name="telefono" value={formData.telefono} onChange={handleChange}
-          className="w-full p-2 border border-gray-300 rounded mt-1" required />
+        <input
+          type="tel"
+          name="telefono"
+          value={formData.telefono}
+          onChange={handleChange}
+          className="w-full p-2 border border-gray-300 rounded mt-1"
+          required
+        />
       </div>
-      <button type="submit"
-        className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">
+
+      <button
+        type="submit"
+        className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition"
+      >
         Reservar cita
       </button>
     </form>
-    
   );
 }
 
 export default AppointmentForm;
+
 
