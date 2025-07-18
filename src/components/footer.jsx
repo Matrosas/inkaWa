@@ -1,3 +1,4 @@
+//integrantes: Rosas de la Vega Mathias, Miñano Tolentino Luis, Quispe Sanchez Miguel
 import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 
 function Footer() {
