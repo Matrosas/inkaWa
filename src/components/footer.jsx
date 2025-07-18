@@ -1,4 +1,4 @@
-//integrantes: Rosas de la Vega Mathias, Miñano Tolentino Luis, Quispe Sanchez Miguel
+
 import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 
 function Footer() {
@@ -6,6 +6,10 @@ function Footer() {
     <footer className="bg-blue-900 text-white py-6 mt-16">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 space-y-4 md:space-y-0">
         <p className="text-sm">© 2025 Inka Warrior. Todos los derechos reservados.</p>
+      <p className="text-sm">Rosas de la Vega Mathias, <br />
+        Miñano Tolentino Luis, <br />
+        Quispe Sanchez Miguel 
+      </p>
         <div className="flex space-x-6 text-xl">
           <a href="https://www.facebook.com/share/19FMqALL3T/" target="_blank" rel="noopener noreferrer"  className="hover:text-yellow-400" aria-label="Facebook">
             <FaFacebookF />
